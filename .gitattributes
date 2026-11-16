@@ -1,0 +1,2 @@
+# Preserve archived CSV/JSON bytes and their checksums across Git clients.
+* -text
