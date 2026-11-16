@@ -1,0 +1,21 @@
+{
+  "status": "COMPLETE_RESIDENT_TIMING",
+  "started_utc": "2026-10-29T14:38:34.840139+00:00",
+  "run_started_unix": 1793283907.713889,
+  "run_deadline_unix": 1793291107.713889,
+  "blocks_done": 32,
+  "completed_calls": 4224,
+  "timing_finished_utc": "2026-10-29T14:47:06.063384+00:00",
+  "finished_utc": "2026-10-29T14:47:07.597124+00:00",
+  "wall_seconds": 1319.8832476139069,
+  "output_bytes": 15493613,
+  "warmup_calls": 1056,
+  "measured_calls": 3168,
+  "all_calls": 4224,
+  "new_training_updates": 0,
+  "GT_reads": 0,
+  "new_accuracy_scoring": 0,
+  "new_methods": 0,
+  "new_samples": 0,
+  "source_and_input_bytes_unchanged": true
+}

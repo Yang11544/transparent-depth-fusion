@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the associated manuscript when available, and identify the repository commit or tag actually used. This record package has no assigned paper DOI."
+title: "Transparent-Object Depth Recovery with Heterogeneous RGB-D Views: Analysis Records"
+authors:
+  - family-names: Lu
+    given-names: Haoyang
+    orcid: "https://orcid.org/0009-0000-2691-5928"
+  - family-names: Xu
+    given-names: Bin
+    orcid: "https://orcid.org/0000-0002-9612-1880"
+version: "public-records-v1"
+type: dataset
+url: "https://github.com/Yang11544/transparent-depth-fusion"
+repository-code: "https://github.com/Yang11544/transparent-depth-fusion"
+abstract: "Scoped numerical records and CPU analysis scripts for a fixed-checkpoint empirical comparison of heterogeneous RGB-D depth recovery and fusion. Not a complete training or inference distribution."

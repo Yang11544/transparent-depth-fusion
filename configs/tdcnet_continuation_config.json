@@ -1,0 +1,54 @@
+{
+  "variant": "D",
+  "seed": 1,
+  "updates": 20000,
+  "training": {
+    "optimizer": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "scheduler": null,
+    "batch": 4,
+    "image_size_wh": [
+      320,
+      240
+    ],
+    "precision": "FP32; AMP/TF32 disabled",
+    "initialization": "same epoch82 model and BN state; fresh optimizer; no output reinitialization",
+    "loss": "existing local masked L1 + .1 cosine surface-normal",
+    "augmentation": "existing RGB noise/chromatic and aligned flips; no depth augmentation"
+  },
+  "evaluation_updates": [
+    5000,
+    10000,
+    15000,
+    20000
+  ],
+  "common_checkpoint": "LOCAL_PROJECT/outputs/tdcnet_local_20261015_092617_resume02_postreboot/checkpoints/best.pt",
+  "common_checkpoint_sha256": "8546b0db6fa99812ce4c97ac52e5a1cdc07eb2e5252fa7dd6d8b3fef9eca8569",
+  "train_scenes": [
+    1,
+    2,
+    3,
+    6,
+    9,
+    17,
+    18,
+    22,
+    26,
+    30
+  ],
+  "development_scenes": [
+    4,
+    10,
+    14,
+    19,
+    25,
+    28
+  ],
+  "train_samples": 4014
+}

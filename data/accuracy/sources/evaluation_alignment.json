@@ -1,0 +1,79 @@
+{
+  "status": "AUTHORIZED_ALIGNMENT_BEFORE_HELDOUT_PIXEL_ACCESS",
+  "created_utc": "2026-10-21T10:51:03.310414+00:00",
+  "heldout_scenes": [
+    11,
+    12,
+    13,
+    15,
+    16,
+    20,
+    21,
+    23,
+    24,
+    27,
+    29
+  ],
+  "pair_manifest_sha256": "32f1d87bb030f2cd7aac027988954a53c76433bfe7eb83035bacd1c27674c2fa",
+  "pair_count": 2193,
+  "direction": "D435 source -> L515 target",
+  "methods": {
+    "S": "target_single_view",
+    "R": "source_raw_equal_mean",
+    "P": "source_prediction_equal_mean",
+    "source_prediction_priority_replace": "auxiliary",
+    "V": "vfuse_best_epoch6",
+    "vfuse_last": "auxiliary_sensitivity"
+  },
+  "main_stage": "target_raw_upper_projection",
+  "report_stage": "original and target_raw_upper_projection",
+  "fixed_search_range_mm": [
+    200,
+    850
+  ],
+  "criteria": {
+    "E_M": "mean over all scorable legal target images of per-image object MAE in mm",
+    "E_M_s": "within-scene mean of per-image object MAE in mm",
+    "Q_M": "pooled pixel RMSE over the same evaluation pixels in mm",
+    "F_M": "pooled fraction of absolute error > 50 mm",
+    "T_M": "complete warm-call latency median; T90_M is p90",
+    "G1": {
+      "formula": "(E_S-E_P)/E_S >= 0.10",
+      "extra": "Q_P <= Q_S"
+    },
+    "G2": {
+      "formula": "count(E_P,s < E_S,s) >= 8",
+      "extra": "scene-equal MAE gain positive and every leave-one-scene overall gain positive"
+    },
+    "G3": {
+      "formula": "(E_R-E_P)/E_R >= 0.05",
+      "extra": "Q_P <= 1.03*Q_R"
+    },
+    "G4": {
+      "formula": "E_P <= 1.03*E_V and Q_P <= 1.03*Q_V",
+      "extra": "same both constraints after leaving each scene; F_P-F_V <= 0.002"
+    },
+    "G5": {
+      "formula": "(T_V-T_P)/T_V >= 0.15",
+      "extra": "T90_P <= T90_V"
+    },
+    "bootstrap": {
+      "unit": "scene groups with shared paired indices",
+      "replicates": 2000,
+      "seed": 20261021,
+      "percentile_ci": [
+        2.5,
+        97.5
+      ]
+    }
+  },
+  "protocol_hashes": {
+    "original": "c9d6bc111a8a32208024a879726ca1d24a27365e44badc170a43765972971e12",
+    "addendum": "6113691008bc9be678b98979270037b0fe451cffe788e35ca71e8699c4a31be5"
+  },
+  "model_identities": {
+    "D_best": "d21b576dcc5321f34231e2e1a9964c2979ca5d326cf02d80fce98a13139e619f",
+    "vfuse_best": "0067da75582cca2f0d30be7e95288f839600d3acb5ca3fa55c7e950a9422d607",
+    "vfuse_last": "5e5efa28aa86a3f15664a19b4e9343451e6bac0c12aac02eb43f692f7d2daa4f"
+  }
+}

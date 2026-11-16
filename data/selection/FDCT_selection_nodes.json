@@ -1,0 +1,50 @@
+[
+  {
+    "update": 5000,
+    "MAE_mm": 16.106873754646887,
+    "images": 2498,
+    "metric": "original per-image equal object MAE, both cameras"
+  },
+  {
+    "update": 10000,
+    "MAE_mm": 14.889279884688086,
+    "images": 2498,
+    "metric": "original per-image equal object MAE, both cameras"
+  },
+  {
+    "update": 15000,
+    "MAE_mm": 13.820731877125088,
+    "images": 2498,
+    "metric": "original per-image equal object MAE, both cameras"
+  },
+  {
+    "update": 20000,
+    "MAE_mm": 13.247373839964887,
+    "images": 2498,
+    "metric": "original per-image equal object MAE, both cameras"
+  },
+  {
+    "update": 25000,
+    "MAE_mm": 14.78737843093361,
+    "images": 2498,
+    "metric": "original per-image equal object MAE, both cameras"
+  },
+  {
+    "update": 30000,
+    "MAE_mm": 11.574940311614306,
+    "images": 2498,
+    "metric": "original per-image equal object MAE, both cameras"
+  },
+  {
+    "update": 35000,
+    "MAE_mm": 16.54501061972668,
+    "images": 2498,
+    "metric": "original per-image equal object MAE, both cameras"
+  },
+  {
+    "update": 40000,
+    "MAE_mm": 12.985782799080534,
+    "images": 2498,
+    "metric": "original per-image equal object MAE, both cameras"
+  }
+]

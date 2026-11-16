@@ -1,0 +1,3 @@
+# Only the optional archived timing replay needs an external package.
+# Best/last replay, integrity verification, and synthetic sensitivity tests use the standard library.
+numpy>=1.24

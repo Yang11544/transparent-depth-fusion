@@ -1,0 +1,60 @@
+{
+  "direction": "D435 source -> L515 target",
+  "pair_rule": "all legal same-view two-camera pairs in each listed scene; no error or metric selection",
+  "model_checkpoints": {
+    "D_best": {
+      "path": "LOCAL_PROJECT/outputs/scene_coverage_RD_20261017_221322/D/checkpoints/best.pt",
+      "sha256": "d21b576dcc5321f34231e2e1a9964c2979ca5d326cf02d80fce98a13139e619f",
+      "role": "frozen target/source single-view backbone"
+    },
+    "vfuse_best": {
+      "path": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/checkpoints/best.pt",
+      "sha256": "0067da75582cca2f0d30be7e95288f839600d3acb5ca3fa55c7e950a9422d607",
+      "role": "epoch6 internal best, fixed before heldout scoring"
+    },
+    "vfuse_last": {
+      "path": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/checkpoints/last.pt",
+      "sha256": "5e5efa28aa86a3f15664a19b4e9343451e6bac0c12aac02eb43f692f7d2daa4f",
+      "role": "epoch30 last, sensitivity only; cannot replace best"
+    }
+  },
+  "geometry": {
+    "output_shape": [
+      240,
+      320
+    ],
+    "units": "millimetres for scoring and V-FUSE range",
+    "source_to_target": "existing fixed T_camera2_camera1; source D435 to target L515; translation converted m->mm as formal adapter",
+    "intrinsics": "existing fixed per-camera intrinsics resized to 320x240",
+    "projection": "nearest-Z target splat, round floor(u+0.5), positive finite valid depth only",
+    "evaluation_region": "target published GT mask after nearest-neighbor resize; all valid nonzero GT pixels; unchanged",
+    "upper_projection": "common target raw upper projection: finite positive target raw <=10m => min(pred,target raw), fixed and applied to every method",
+    "fixed_threshold": "none selected or changed in heldout; no GT-driven threshold/depth-range change",
+    "search_range_mm": [
+      200,
+      850
+    ],
+    "search_range_source": "fit-only fixed range from formal V-FUSE run; heldout GT cannot change it"
+  },
+  "methods": [
+    "target_single_view",
+    "source_raw_equal_mean",
+    "source_prediction_equal_mean",
+    "source_prediction_priority_replace",
+    "vfuse_best",
+    "vfuse_last_sensitivity"
+  ],
+  "stages": [
+    "original",
+    "target_raw_upper_projection"
+  ],
+  "metrics": [
+    "per_image_equal_weight_MAE_mm",
+    "pixel_RMSE_mm",
+    "pixel_P95_mm",
+    "pixel_P99_mm",
+    "over50mm_fraction",
+    "scene_equal_weight",
+    "leave_one_scene_out_sensitivity"
+  ]
+}

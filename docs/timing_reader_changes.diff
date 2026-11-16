@@ -1,0 +1,84 @@
+--- historical/analyze_timing.py
++++ analysis/analyze_timing.py
+@@ -1,5 +1,7 @@
+ #!/usr/bin/env python3
+-"""Analyze only timing logs. No torch imports, GT reads or prediction scoring."""
++"""Public I/O adaptation of the saved timing analyzer. Calculation functions unchanged.
++Reads exported per-call CSV and bundled block records. No torch, GT, or scoring.
++"""
+ from __future__ import annotations
+ import argparse, csv, json, math, sys
+ from collections import defaultdict
+@@ -142,28 +144,56 @@
+     (out/'REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+     return comparison
+ 
+-def analyze(run_dir,output=None):
+-    run=Path(run_dir);protocol=load_json(run/'protocol.json');schedule=load_json(run/'schedule.json')
++def analyze(run_dir, output):
++    """Replay the supplied exported calls and saved block-state records, not a live run."""
++    run=Path(run_dir).resolve()
++    out=Path(output).resolve()
++    if out.exists():
++        raise ProtocolError('Refusing to overwrite an existing output directory')
++    if out.is_relative_to(PACKAGE/'data') or out.is_relative_to(PACKAGE/'configs'):
++        raise ProtocolError('Output must not be within archived data or configs')
++    protocol=load_json(run/'protocol.json');schedule=load_json(run/'schedule.json')
+     if load_json(run/'execution_status.json')['status'] not in ('TIMING_COMPLETE','COMPLETE_RESIDENT_TIMING'):
+-        raise ProtocolError('Controller did not certify full timing completion')
+-    rows=[]
++        raise ProtocolError('Saved controller record does not certify completion')
++    completed=load_json(run/'block_completion.json')['blocks']
++    by_index={int(c['block_index']):c for c in completed}
++    if len(completed)!=32 or len(by_index)!=32:
++        raise ProtocolError('Expected 32 saved block-completion records')
+     for b in schedule['blocks']:
+-        d=run/'blocks'/f"{b['block_index']:02d}_{b['frontend']}_{b['method']}"
+-        c=load_json(d/'complete.json')
++        c=by_index[b['block_index']]
+         if c.get('status')!='COMPLETE_BLOCK' or c.get('state_before')!=c.get('state_after') or not c.get('bn_unchanged'):
+-            raise ProtocolError('Block completion/state verification failed')
+-        rows += [json.loads(s) for s in (d/'calls.jsonl').read_text().splitlines() if s.strip()]
++            raise ProtocolError('Saved block completion/state verification failed')
++        for key in ('round','frontend','method','method_position','warmup_order','measured_orders'):
++            if c[key]!=b[key]:
++                raise ProtocolError('Saved block completion differs from schedule')
++    rows=read_csv(run/'per_call.csv')
++    string_cols={'frontend','method','phase','pair_id','utc'}
++    for r in rows:
++        for key,value in r.items():
++            if key in string_cols: continue
++            r[key]=float(value) if key.endswith('_seconds') else int(value)
+     measured,warm=validate_rows(rows,protocol,schedule)
+-    # Use the historical table by identity, never substitute the quoted percentage.
+-    r=protocol['sources']['legacy_summary.csv'];fp=PACKAGE/r['snapshot'];checked_file(fp,r['sha256'],r['bytes'])
+-    legacy=read_csv(fp);paired=paired_comparisons(measured,protocol);boots=paired_bootstrap(paired,protocol)
+-    out=Path(output) if output else run/'analysis';out.mkdir(parents=True,exist_ok=False)
++    rec=protocol['sources']['legacy_summary.csv'];fp=PACKAGE/rec['snapshot']
++    checked_file(fp,rec['sha256'],rec['bytes'])
++    legacy=read_csv(fp)
++    paired=paired_comparisons(measured,protocol)
++    boots=paired_bootstrap(paired,protocol)
++    out.mkdir(parents=True,exist_ok=False)
+     write_csv(out/'per_call.csv',rows)
+     comparison=build_outputs(measured,paired,boots,legacy,protocol,out)
+-    dump(out/'analysis_complete.json',dict(status='COMPLETE_TIMING_ANALYSIS',all_calls=len(rows),measured=len(measured),warmup=len(warm),
+-        paired_comparisons=len(paired),comparisons=len(comparison),accuracy_metrics_recomputed=0))
++    dump(out/'analysis_complete.json',dict(status='ARCHIVED_RECORD_REPLAY',all_calls=len(rows),
++        measured=len(measured),warmup=len(warm),paired_comparisons=len(paired),
++        comparisons=len(comparison),accuracy_metrics_recomputed=0,
++        scope='Saved-record replay only; no model output, GPU execution, or historical provenance authentication.'))
+     return out
+ 
+ if __name__=='__main__':
+-    p=argparse.ArgumentParser();p.add_argument('--run-dir',required=True);p.add_argument('--out');a=p.parse_args()
+-    print(analyze(a.run_dir,a.out))
++    parser=argparse.ArgumentParser(description='Optional replay of existing timing records; no new measurement or inference.')
++    parser.add_argument('--run-dir',required=True)
++    parser.add_argument('--out',required=True)
++    args=parser.parse_args()
++    try:
++        print(analyze(args.run_dir,args.out))
++    except (OSError,ValueError,KeyError,ProtocolError) as exc:
++        print(f'BLOCKED: {exc}',file=sys.stderr)
++        sys.exit(2)

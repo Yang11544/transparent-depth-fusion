@@ -1,0 +1,1220 @@
+{
+  "package_revision": "public-records-v1",
+  "prepared_date": "2026-11-16",
+  "source_bundle_filename": "IEEE_Sensors_B0.9_源码与核验包.zip",
+  "source_bundle_sha256": "6d15d802b584dbc22050fb6a853baec77ff0f7900f392a93f5d494e571b41fb0",
+  "repository_target": "https://github.com/Yang11544/transparent-depth-fusion",
+  "remote_upload_performed": false,
+  "scope": "Locally prepared file identity mapping. Original and sanitized identities are distinguished. This manifest and SHA256SUMS.txt do not hash themselves. SHA256SUMS.txt covers this manifest. No trusted timestamp or raw-experiment reproduction claim.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 83,
+      "sha256": "c76ca87815d6337b6e633b56097c651f16982abc5db3f39c8e2ba3293bf56afc",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 172,
+      "sha256": "ead8e8a152d05a5b1276a37a6b4ca2fbad8ef54f242280e48b65e1d6855fd84b",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 863,
+      "sha256": "6d898cc16788ac66193ef535f733edffdbddff6864c6aa78092f58107e4d5050",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "PACKAGE_VALIDATION.json",
+      "bytes": 3320,
+      "sha256": "ce8dd84847666f73caad9dee520e12b961259668c40d32f5e734eaa52caae070",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6354,
+      "sha256": "5b471ea0d0a43b5d6ad99392240cc62e5a6cca37d8db9b4fff18597eb2f7fce4",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "README_zh-CN.md",
+      "bytes": 3367,
+      "sha256": "c01b086a02343362e00abf77df8ae00690eefd7d238f8a7f19955982d586a099",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "RIGHTS_AND_LICENSES.md",
+      "bytes": 2462,
+      "sha256": "493ff50ca05e2aad0e8011719094626b9f800777df73a27824d5b505cb6fbaf1",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "VERSION",
+      "bytes": 136,
+      "sha256": "0995c26f85f5cb035d2d37446f89a806799b0f811b301eff3fd049b560fe577e",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "analysis/analyze_best_last.py",
+      "bytes": 16134,
+      "sha256": "aa62266a3cb1f5498c2c973cb0ac001fe374cbc015d30fbe11ba309484b38d06",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/scripts/analyze_best_last.py",
+          "sha256": "aa62266a3cb1f5498c2c973cb0ac001fe374cbc015d30fbe11ba309484b38d06",
+          "bytes": 16134
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "analysis/analyze_timing.py",
+      "bytes": 14313,
+      "sha256": "bf6fa68572e5916fa4e87aa082ed411b26042294aa2f47322e289b46216bf00d",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/execution_source/scripts/analyze_timing.py",
+          "sha256": "bdcebf850e60dd2f2c22d52387add34f7d12c5a420d8342c127406c22f61213f",
+          "bytes": 12966
+        }
+      ],
+      "treatment": "public reader adaptation; original calculation functions unchanged",
+      "details": {
+        "changed": "Entry-point reads the unchanged exported per_call.csv and combined completion record rather than 32 private block directories; output never overwrites input. Original grouping/pairing/bootstrap/output calculations retained."
+      }
+    },
+    {
+      "path": "analysis/common.py",
+      "bytes": 1833,
+      "sha256": "60dc4aff1be42faf5842ce384a0693a7502b211e5dd7befbc6067f162db4ba7b",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/execution_source/scripts/common.py",
+          "sha256": "b7f4446f5224aabbe81dc03143bef9cf96cd959f2b90875132b2e740769e0fa3",
+          "bytes": 8898
+        }
+      ],
+      "treatment": "selected unchanged CPU file I/O helper definitions; dropped live-GPU/preflight utilities"
+    },
+    {
+      "path": "analysis/test_sensitivity.py",
+      "bytes": 1716,
+      "sha256": "ea7c0b8607049a4fed38131d96c7b13a68e58404dc449c4492f0c2727e655255",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/scripts/test_sensitivity.py",
+          "sha256": "ea7c0b8607049a4fed38131d96c7b13a68e58404dc449c4492f0c2727e655255",
+          "bytes": 1716
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "analysis/verify_release.py",
+      "bytes": 6788,
+      "sha256": "22659b773f818faa6c71693e1aa8bfc3249044958e81f765aaa20993b787d5bd",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "configs/followup_recipe_record.json",
+      "bytes": 1144,
+      "sha256": "02dc8798dac5058f6b38233fb372df4bb024cfce85028eb455cfec77629a7e51",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/protocol/followup_protocol.json",
+          "sha256": "3864ebbe1147caf7f55b2000af01b6b34c91416966aa08350966c4f0457321d9",
+          "bytes": 1534
+        }
+      ],
+      "treatment": "selected scientific configuration fields; conversational approvals and job budget controls omitted",
+      "details": {
+        "preserved_fields": [
+          "experiment_id",
+          "registered_beijing",
+          "fdct_seed",
+          "fdct_updates",
+          "fdct_bn",
+          "vfuse_seeds",
+          "new_vfuse_runs",
+          "new_vfuse_updates",
+          "total_successful_updates_cap",
+          "no_method_changes",
+          "all_fusion_locks_before_reserved_scoring",
+          "recovery_output_tolerance_mm",
+          "recovery_relative_tolerance",
+          "fdct_recipe",
+          "plan_sha256",
+          "scope_sha256",
+          "source_commit"
+        ]
+      }
+    },
+    {
+      "path": "configs/initial_method_settings.json",
+      "bytes": 2428,
+      "sha256": "6a196d7558f4f0bfdd317b0546ed62c81e0d79a80b9d668506d72461f21df80a",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/protocol/initial_protocol.json",
+          "sha256": "c9d6bc111a8a32208024a879726ca1d24a27365e44badc170a43765972971e12",
+          "bytes": 7997
+        }
+      ],
+      "treatment": "selected initial method settings with local path prefix sanitation",
+      "details": {
+        "warning": "Initial protocol only. Composite criteria must be read from data/accuracy/sources/evaluation_alignment.json; follow-up extends front ends and seeds."
+      }
+    },
+    {
+      "path": "configs/recorded_environment.json",
+      "bytes": 659,
+      "sha256": "ea8b2ab6f98694af1cc50ef9e09ccfa6cf59b1606233167ad36b13f65499a1e6",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/environment.json",
+          "sha256": "a78de666033bb34d0ffab2ee60f81d9df501fe2d4301b94af6a5b0c5463a7a1f",
+          "bytes": 706
+        }
+      ],
+      "treatment": "sanitized metadata copy",
+      "details": {
+        "removed_top_level_fields": [],
+        "text_substitutions": "Local path prefixes replaced by LOCAL_PROJECT / LOCAL_HOME / LOCAL_BUILD; GPU UUID redacted. Numerical fields and scientific identities preserved."
+      }
+    },
+    {
+      "path": "configs/tdcnet_continuation_config.json",
+      "bytes": 1092,
+      "sha256": "ac7e7654eb971ef3e2fca338e31012536c3d4845116b82f13a25ff31e215abb9",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/training/tdcnet_continuation_config.json",
+          "sha256": "f833e286ff3de5a9a90dbc36ba0f1094a03c1dc232bbddb20e055743d8286a7e",
+          "bytes": 1116
+        }
+      ],
+      "treatment": "sanitized metadata copy",
+      "details": {
+        "removed_top_level_fields": [],
+        "text_substitutions": "Local path prefixes replaced by LOCAL_PROJECT / LOCAL_HOME / LOCAL_BUILD; GPU UUID redacted. Numerical fields and scientific identities preserved."
+      }
+    },
+    {
+      "path": "configs/tdcnet_initial_config.json",
+      "bytes": 2124,
+      "sha256": "013ea5693798428368957543b85f2d65ec29122513c6f52f2d425bfe255536a4",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/training/tdcnet_initial_config.json",
+          "sha256": "013ea5693798428368957543b85f2d65ec29122513c6f52f2d425bfe255536a4",
+          "bytes": 2124
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "configs/training_cost_record.json",
+      "bytes": 1073,
+      "sha256": "b0915ce2f81a1b812d545d7648abb6797e216da03cc025f37cdbb7c37183378d",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/training_cost_record.json",
+          "sha256": "b0915ce2f81a1b812d545d7648abb6797e216da03cc025f37cdbb7c37183378d",
+          "bytes": 1073
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/V_FUSE_three_seed_summary.csv",
+      "bytes": 10811,
+      "sha256": "4e956597e6a5201442c854b1ec1255b3b9ad8dbbb3e93a8a7a1a4181bb43b464",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/scores/V_FUSE_three_seed_summary.csv",
+          "sha256": "4e956597e6a5201442c854b1ec1255b3b9ad8dbbb3e93a8a7a1a4181bb43b464",
+          "bytes": 10811
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/expected/best_last_LOSO_comparisons.csv",
+      "bytes": 50577,
+      "sha256": "4ab4eeda8c03200cf4ef6e8367281513e65f29ccf48364ed72121a0fe1997bb6",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/statistics/best_last_LOSO_comparisons.csv",
+          "sha256": "4ab4eeda8c03200cf4ef6e8367281513e65f29ccf48364ed72121a0fe1997bb6",
+          "bytes": 50577
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/expected/best_last_checkpoint_changes.csv",
+      "bytes": 2187,
+      "sha256": "c3af22c676239047143f98879f3706c1bba7c671ac29289473bc789fb97dce67",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/statistics/best_last_checkpoint_changes.csv",
+          "sha256": "c3af22c676239047143f98879f3706c1bba7c671ac29289473bc789fb97dce67",
+          "bytes": 2187
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/expected/best_last_full_G4.csv",
+      "bytes": 8706,
+      "sha256": "800693aceefbe920b2d8487aea978de87e9b4cb69a7b0f6fe846f6b121acb25f",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/statistics/best_last_full_G4.csv",
+          "sha256": "800693aceefbe920b2d8487aea978de87e9b4cb69a7b0f6fe846f6b121acb25f",
+          "bytes": 8706
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/expected/checkpoint_identity.csv",
+      "bytes": 2787,
+      "sha256": "86226fff2a78bc5445cfb0c9d1df2fcf03989af012b8f397fe31e5a00c9b002b",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/statistics/checkpoint_identity.csv",
+          "sha256": "aa453887551d172044dd28acbd47f188abd7af75d6ecff64234fef095c4a5990",
+          "bytes": 3088
+        }
+      ],
+      "treatment": "local path text sanitized; numerical fields and SHA256 identities preserved"
+    },
+    {
+      "path": "data/accuracy/expected/recomputed_LOSO_metrics.csv",
+      "bytes": 51050,
+      "sha256": "e960e426b12dbcde90ecbbba14790f3279fb297d8cee0ee35c7b5fe20350fa16",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/statistics/recomputed_LOSO_metrics.csv",
+          "sha256": "e960e426b12dbcde90ecbbba14790f3279fb297d8cee0ee35c7b5fe20350fa16",
+          "bytes": 51050
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/expected/recomputed_overall.csv",
+      "bytes": 4592,
+      "sha256": "f65154eb46ab38c018bd17b01f22d01bfa76b66b719d85facdcfe51970680f2d",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/statistics/recomputed_overall.csv",
+          "sha256": "f65154eb46ab38c018bd17b01f22d01bfa76b66b719d85facdcfe51970680f2d",
+          "bytes": 4592
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/expected/recomputed_per_scene.csv",
+      "bytes": 50192,
+      "sha256": "3e0e2b4d00c1b581838ba4a51e246d4f48c676e8c5da2fa02e3295555696026c",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/statistics/recomputed_per_scene.csv",
+          "sha256": "3e0e2b4d00c1b581838ba4a51e246d4f48c676e8c5da2fa02e3295555696026c",
+          "bytes": 50192
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/scene_bootstrap.json",
+      "bytes": 5235,
+      "sha256": "8facaeac2c302b224b2a19f2e79a9a9a7171bd6c220eb46438176fcccfdd6853",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/scores/scene_bootstrap.json",
+          "sha256": "8facaeac2c302b224b2a19f2e79a9a9a7171bd6c220eb46438176fcccfdd6853",
+          "bytes": 5235
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/scene_equal.csv",
+      "bytes": 5671,
+      "sha256": "b99d782f03bbf4ddc7bc59d9454d72f2181b1b6663a442e289ee37c3bd0e76c1",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/scores/scene_equal.csv",
+          "sha256": "b99d782f03bbf4ddc7bc59d9454d72f2181b1b6663a442e289ee37c3bd0e76c1",
+          "bytes": 5671
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/sources/D_per_image.csv",
+      "bytes": 6014750,
+      "sha256": "48485dc2f6ac606005fa9055dd71cc0f53a27f1507f37661f359ce170a02cc4b",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/D_per_image.csv",
+          "sha256": "48485dc2f6ac606005fa9055dd71cc0f53a27f1507f37661f359ce170a02cc4b",
+          "bytes": 6014750
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/sources/D_saved_leave_one_scene.csv",
+      "bytes": 25275,
+      "sha256": "246f81f17787a16936993c965abeef41c5a03058fd366a7ed5c176ec69cfd3ef",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/D_saved_leave_one_scene.csv",
+          "sha256": "246f81f17787a16936993c965abeef41c5a03058fd366a7ed5c176ec69cfd3ef",
+          "bytes": 25275
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/sources/D_saved_per_scene.csv",
+      "bytes": 24815,
+      "sha256": "afe4919d20af17724e4b0134c2fa98fbb25e31da2ea42a700bbd7800120d78ab",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/D_saved_per_scene.csv",
+          "sha256": "afe4919d20af17724e4b0134c2fa98fbb25e31da2ea42a700bbd7800120d78ab",
+          "bytes": 24815
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/sources/FDCT_per_image.csv",
+      "bytes": 6153108,
+      "sha256": "0c09063f4fc54ff374b932a4273a256791273d2aae26269ea1227dd9629d7489",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/FDCT_per_image.csv",
+          "sha256": "0c09063f4fc54ff374b932a4273a256791273d2aae26269ea1227dd9629d7489",
+          "bytes": 6153108
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/sources/FDCT_saved_leave_one_scene.csv",
+      "bytes": 25876,
+      "sha256": "b8a7b780835fc397e980b7cbe92123d6a5ab0b688b4d238a188fd052dfcd2bd8",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/FDCT_saved_leave_one_scene.csv",
+          "sha256": "b8a7b780835fc397e980b7cbe92123d6a5ab0b688b4d238a188fd052dfcd2bd8",
+          "bytes": 25876
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/sources/FDCT_saved_per_scene.csv",
+      "bytes": 25431,
+      "sha256": "43014301ff37f8cc1afb7d0ea14cab7f9e07bcc1092d19761310164ec98d4749",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/FDCT_saved_per_scene.csv",
+          "sha256": "43014301ff37f8cc1afb7d0ea14cab7f9e07bcc1092d19761310164ec98d4749",
+          "bytes": 25431
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/sources/evaluation_alignment.json",
+      "bytes": 2429,
+      "sha256": "bbe76172bba8cff1ac8bef0320b20cbd86d1703e68b8fdc6766fb7fc531c804c",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/evaluation_alignment.json",
+          "sha256": "fb70c131bc82c5de479733be38dcec6751c71a4219a0e584ebfa93f44618410b",
+          "bytes": 6871
+        }
+      ],
+      "treatment": "selected metadata fields; local paths sanitized",
+      "details": {
+        "preserved_fields": [
+          "status",
+          "created_utc",
+          "heldout_scenes",
+          "pair_manifest_sha256",
+          "pair_count",
+          "direction",
+          "methods",
+          "main_stage",
+          "report_stage",
+          "fixed_search_range_mm",
+          "criteria",
+          "protocol_hashes",
+          "model_identities"
+        ],
+        "omitted": "Interactive authorization text, execution budgets and local file identity maps; original file hash retained in this manifest."
+      }
+    },
+    {
+      "path": "data/accuracy/sources/initial_per_image.csv",
+      "bytes": 3205588,
+      "sha256": "bf94920bd52a88d0eba33ca3ff001e39198f77b9d28a21137dbd9f45c6eadc80",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/initial_per_image.csv",
+          "sha256": "bf94920bd52a88d0eba33ca3ff001e39198f77b9d28a21137dbd9f45c6eadc80",
+          "bytes": 3205588
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/sources/legal_pairs_final.json",
+      "bytes": 675709,
+      "sha256": "32f1d87bb030f2cd7aac027988954a53c76433bfe7eb83035bacd1c27674c2fa",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/legal_pairs_final.json",
+          "sha256": "32f1d87bb030f2cd7aac027988954a53c76433bfe7eb83035bacd1c27674c2fa",
+          "bytes": 675709
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/sources/model_lock_record.json",
+      "bytes": 6117,
+      "sha256": "05beac8358d70501473b9f97b647410d1e36aa0a0e5f95add783308f44db462d",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/model_lock_record.json",
+          "sha256": "e0968837c272ef75b9778744b1b1f4a186b322d8d6eba9dcf5c7388f1ef9091e",
+          "bytes": 6405
+        }
+      ],
+      "treatment": "sanitized metadata copy",
+      "details": {
+        "removed_top_level_fields": [],
+        "text_substitutions": "Local path prefixes replaced by LOCAL_PROJECT / LOCAL_HOME / LOCAL_BUILD; GPU UUID redacted. Numerical fields and scientific identities preserved."
+      }
+    },
+    {
+      "path": "data/accuracy/sources/saved_best_criteria.csv",
+      "bytes": 1849,
+      "sha256": "35940859878f782d12b583b68cb0d249183fe9fa957308847fc83fb9ab130b92",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/saved_best_criteria.csv",
+          "sha256": "35940859878f782d12b583b68cb0d249183fe9fa957308847fc83fb9ab130b92",
+          "bytes": 1849
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/accuracy/sources/source_manifest.json",
+      "bytes": 2046,
+      "sha256": "76134293c489b35cd8ad46bc8fc6fd65ac2f5426272541706a6596813ba4cf78",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "data/accuracy/sources/summary_all.csv",
+      "bytes": 6050,
+      "sha256": "5aa4f191e5b986503650e1d537d7a332fcf080dac238052b13fee99fe9707c9a",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/checkpoint_sensitivity/sources/summary_all.csv",
+          "sha256": "5aa4f191e5b986503650e1d537d7a332fcf080dac238052b13fee99fe9707c9a",
+          "bytes": 6050
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/data_selection/excluded_305_existing_records.csv",
+      "bytes": 55383,
+      "sha256": "95508edee9182bed720eb65c28c5f629469f77f6780221d16f364db8c275741b",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/data_selection/excluded_305_existing_records.csv",
+          "sha256": "95508edee9182bed720eb65c28c5f629469f77f6780221d16f364db8c275741b",
+          "bytes": 55383
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/data_selection/scene_stage_reconciliation.csv",
+      "bytes": 443,
+      "sha256": "f26adb0657ac0ede377710c9a658b5e473ed8bb69d2a8bddd667cd0975d95706",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/data_selection/scene_stage_reconciliation.csv",
+          "sha256": "f26adb0657ac0ede377710c9a658b5e473ed8bb69d2a8bddd667cd0975d95706",
+          "bytes": 443
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/data_selection/source_records/inclusion_exclusion_final.json",
+      "bytes": 1578,
+      "sha256": "b037fdb9fad1a9170a2dcf740bd6071ba8281f04e8b1ba49ef69f06a276a3852",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/data_selection/source_records/inclusion_exclusion_final.json",
+          "sha256": "b037fdb9fad1a9170a2dcf740bd6071ba8281f04e8b1ba49ef69f06a276a3852",
+          "bytes": 1578
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/data_selection/source_records/reference/old_archive_members.json",
+      "bytes": 11683778,
+      "sha256": "d4125fdc56002a72c6143be4c7e85cf82744966a2b08c593521463768581bdbf",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/data_selection/source_records/reference/old_archive_members.json",
+          "sha256": "f00f0ffc8eb24de450e2901f15cb947fdcf62d38018d603698c3ea657ae521bf",
+          "bytes": 16897980
+        }
+      ],
+      "treatment": "local archive path prefixes sanitized; compact JSON serialization",
+      "details": {
+        "preserved": "All 36,209 entries, archive/member names, directory flags, sizes, CRC values, timestamps, and other field values except local path prefixes."
+      }
+    },
+    {
+      "path": "data/data_selection/source_records/reference/old_inclusion_exclusion.json",
+      "bytes": 719134,
+      "sha256": "46be21ec6001a814e81709f37ffc38d8928315038199b4bc7492ba01cf250042",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/data_selection/source_records/reference/old_inclusion_exclusion.json",
+          "sha256": "46be21ec6001a814e81709f37ffc38d8928315038199b4bc7492ba01cf250042",
+          "bytes": 719134
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/data_selection/source_records/reference/old_pair_manifest_predecode.json",
+      "bytes": 684465,
+      "sha256": "34a653d07c108af9010d28109ec10205c27365748d30254539ac6df5fb0ffd81",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/data_selection/source_records/reference/old_pair_manifest_predecode.json",
+          "sha256": "34a653d07c108af9010d28109ec10205c27365748d30254539ac6df5fb0ffd81",
+          "bytes": 684465
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/qualitative_selection/panel_candidate_metrics.csv",
+      "bytes": 12132,
+      "sha256": "904debcc6200481ee418c9685a98c613ae1f81ab3a0cd2abe3a2eb1775d00a9a",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/qualitative/input_spec/qualitative/panel_candidate_metrics.csv",
+          "sha256": "904debcc6200481ee418c9685a98c613ae1f81ab3a0cd2abe3a2eb1775d00a9a",
+          "bytes": 12132
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/qualitative_selection/selected_examples.csv",
+      "bytes": 1885,
+      "sha256": "990a07fe1e733e375b014d91725e913f46381229aaad8c03666904ecbc6ecb23",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/qualitative/input_spec/qualitative/selected_examples.csv",
+          "sha256": "990a07fe1e733e375b014d91725e913f46381229aaad8c03666904ecbc6ecb23",
+          "bytes": 1885
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/qualitative_selection/selection_and_display_protocol.json",
+      "bytes": 3002,
+      "sha256": "f8b0809ea77af322046a0304d6446d8a2eb6f21f7e749bf0030a8bbcc5251bf0",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/qualitative/input_spec/qualitative/selection_and_display_protocol.json",
+          "sha256": "f8b0809ea77af322046a0304d6446d8a2eb6f21f7e749bf0030a8bbcc5251bf0",
+          "bytes": 3002
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/selection/D_seed11_internal_nodes.csv",
+      "bytes": 5109,
+      "sha256": "406dff69894717d72caee03a73bbd5b2fb55a7c9c501b8567dc3b76460b82a70",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/selection/D_seed11_internal_nodes.csv",
+          "sha256": "406dff69894717d72caee03a73bbd5b2fb55a7c9c501b8567dc3b76460b82a70",
+          "bytes": 5109
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/selection/D_seed29_internal_nodes.csv",
+      "bytes": 5173,
+      "sha256": "e4e72cd4ed1a13b59fb79346069c28cd7c3cc6a6cfcf81dbcddd8999043d846c",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/selection/D_seed29_internal_nodes.csv",
+          "sha256": "e4e72cd4ed1a13b59fb79346069c28cd7c3cc6a6cfcf81dbcddd8999043d846c",
+          "bytes": 5173
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/selection/D_seed47_internal_nodes.csv",
+      "bytes": 5085,
+      "sha256": "109937c6b49feea779d538a056a81f4970a806f3d604c211942c88a551b58e53",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/selection/D_seed47_internal_nodes.csv",
+          "sha256": "109937c6b49feea779d538a056a81f4970a806f3d604c211942c88a551b58e53",
+          "bytes": 5085
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/selection/FDCT_seed11_internal_nodes.csv",
+      "bytes": 5242,
+      "sha256": "f44f6da8687720b75b88e145aedc36249d41d9b0093d90a082ee44f2d1f964e1",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/selection/FDCT_seed11_internal_nodes.csv",
+          "sha256": "f44f6da8687720b75b88e145aedc36249d41d9b0093d90a082ee44f2d1f964e1",
+          "bytes": 5242
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/selection/FDCT_seed29_internal_nodes.csv",
+      "bytes": 5215,
+      "sha256": "e768bf2484526555672eb4af0935a090f76ad3f925464f51c8a0455f03f0051e",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/selection/FDCT_seed29_internal_nodes.csv",
+          "sha256": "e768bf2484526555672eb4af0935a090f76ad3f925464f51c8a0455f03f0051e",
+          "bytes": 5215
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/selection/FDCT_seed47_internal_nodes.csv",
+      "bytes": 5063,
+      "sha256": "5c736e3805749ae087421084e8f623fa1a712601450de42dae15ad8db89f843c",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/selection/FDCT_seed47_internal_nodes.csv",
+          "sha256": "5c736e3805749ae087421084e8f623fa1a712601450de42dae15ad8db89f843c",
+          "bytes": 5063
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/selection/FDCT_selection_nodes.json",
+      "bytes": 1199,
+      "sha256": "cf6a837a88b77c3d82f93623af497c674d2498d2eb04cc221bec5b337af06bce",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/selection/FDCT_selection_nodes.json",
+          "sha256": "cf6a837a88b77c3d82f93623af497c674d2498d2eb04cc221bec5b337af06bce",
+          "bytes": 1199
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/original/bootstrap.json",
+      "bytes": 2101,
+      "sha256": "970370aef17bfbfcb3089cabe4c2830f3a06ac6ccd4416fae8656702267b7b98",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/scores/timing/bootstrap.json",
+          "sha256": "970370aef17bfbfcb3089cabe4c2830f3a06ac6ccd4416fae8656702267b7b98",
+          "bytes": 2101
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/original/per_call.csv",
+      "bytes": 345467,
+      "sha256": "8423bddaf9103fffd6599b10cae6941d6f5113fd2f17704a722d275df0b1b2d4",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/scores/timing/per_call.csv",
+          "sha256": "8423bddaf9103fffd6599b10cae6941d6f5113fd2f17704a722d275df0b1b2d4",
+          "bytes": 345467
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/original/summary.csv",
+      "bytes": 1860,
+      "sha256": "7015fc8785a4bd262ba7ee5ec33779da19e785819d06c1b3fd348690e7a8126d",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/scores/timing/summary.csv",
+          "sha256": "7015fc8785a4bd262ba7ee5ec33779da19e785819d06c1b3fd348690e7a8126d",
+          "bytes": 1860
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/resident/block_completion.json",
+      "bytes": 117748,
+      "sha256": "ad7c36bcbeb2a2efda481aee93daacb0c0a8dde4cc29b463825a0e3fe2e6f9a1",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/00_D_source_prediction_mean/complete.json",
+          "sha256": "afb3b4d806aaff00b99ceb17c6de584b9fe4b28c60c12601fd021529195a5466",
+          "bytes": 2816
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/01_D_vfuse_seed11_best/complete.json",
+          "sha256": "b29dd9ed452d3129c5a74de33216e117cae74da36181706581df83a77b8e4399",
+          "bytes": 2955
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/02_D_vfuse_seed47_best/complete.json",
+          "sha256": "6751f01d5ea95d0ee6aafd66d248dc2ded358fcd99b884f84191593a4570f9c9",
+          "bytes": 2955
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/03_D_vfuse_seed29_best/complete.json",
+          "sha256": "6ade56bad828fad49ee1bd711c43bfd2793d6862f2e68f94f514516255f04912",
+          "bytes": 2953
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/04_FDCT_source_prediction_mean/complete.json",
+          "sha256": "80e9c0f378da83c9078c76153bbaecf8fb688f032e7ad6b6b363f365f34f641b",
+          "bytes": 2818
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/05_FDCT_vfuse_seed11_best/complete.json",
+          "sha256": "740595ce899643baaa8fda92f4fabf0ef5b3ba51fecedeeddbab1d0186d7af85",
+          "bytes": 2958
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/06_FDCT_vfuse_seed47_best/complete.json",
+          "sha256": "5f3b7cdcda3c6d373f25c82bb825cf9b11091c50df75fd6b6c6944103f493a4b",
+          "bytes": 2958
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/07_FDCT_vfuse_seed29_best/complete.json",
+          "sha256": "61636170969efa72656bf9893abf837905030c36c09434a11f0e66cae4a43f41",
+          "bytes": 2958
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/08_FDCT_vfuse_seed11_best/complete.json",
+          "sha256": "2a87d70021564405cb735d897fb7f2d3bf8b66664aa4b5f276d63a369ce60dec",
+          "bytes": 2958
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/09_FDCT_vfuse_seed29_best/complete.json",
+          "sha256": "1747f8b312c9b68767716d7c856c9f649bb08bf3019025e9a2d8bde04fb7bddd",
+          "bytes": 2958
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/10_FDCT_source_prediction_mean/complete.json",
+          "sha256": "ceb5e326a9ae066f750ba084729d5803e214447a2672b77fab2eace2a51e6d57",
+          "bytes": 2819
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/11_FDCT_vfuse_seed47_best/complete.json",
+          "sha256": "878aff67cff3af48f37cba7ba410d4378edfb7a00df2f7008b201105f36dd22b",
+          "bytes": 2959
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/12_D_vfuse_seed11_best/complete.json",
+          "sha256": "209983052f58b883535376eac669bb56dbb26baf9ef0d6b20e96258040d08546",
+          "bytes": 2956
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/13_D_vfuse_seed29_best/complete.json",
+          "sha256": "cc6b217172ad42dc33b7c0a160d7c17866ac022524882a5d5e4fd4febd257368",
+          "bytes": 2956
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/14_D_source_prediction_mean/complete.json",
+          "sha256": "c9c844f1bc5b7465ee6f35d4836521143f8164483b339edda303c30d243cde33",
+          "bytes": 2817
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/15_D_vfuse_seed47_best/complete.json",
+          "sha256": "85f6c640df932f80993553dd5634ba77ed824c3ef20c5ffd934c25f75b610343",
+          "bytes": 2955
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/16_D_vfuse_seed29_best/complete.json",
+          "sha256": "22b88185bdad540ef2d9ade79de143085604083a465ef151e16e77e9ebe5eec2",
+          "bytes": 2955
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/17_D_vfuse_seed47_best/complete.json",
+          "sha256": "26c5faf28473e26601a30ea4488dace5a1355efe8df34c9648d6368cfc5ac5d2",
+          "bytes": 2956
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/18_D_vfuse_seed11_best/complete.json",
+          "sha256": "ee67ef7b2bbc55ab484840d86b4bdee9ae4567d6e0ac27fba5565e2fe94ed164",
+          "bytes": 2955
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/19_D_source_prediction_mean/complete.json",
+          "sha256": "2db07b460f0c6338677689b06e7627b26a37dc59d4364fb2b726992c7035bd26",
+          "bytes": 2817
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/20_FDCT_vfuse_seed29_best/complete.json",
+          "sha256": "0b04c4353beaa292921d7d50667e3bc93d3580692e54213e7021286ddd9cc756",
+          "bytes": 2959
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/21_FDCT_vfuse_seed47_best/complete.json",
+          "sha256": "103dae203993b04d558afe898f3d1f5410d491a6a636d3dbb26f4a7c5b8841d6",
+          "bytes": 2959
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/22_FDCT_vfuse_seed11_best/complete.json",
+          "sha256": "d86d773874b9070715562a1ec01e21e0ea195cfb015f69c6ab893717af75846d",
+          "bytes": 2958
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/23_FDCT_source_prediction_mean/complete.json",
+          "sha256": "135e2634a96c8a116a6aea36421b93b206614e96ce959b2237e6516c5fd35d85",
+          "bytes": 2819
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/24_FDCT_vfuse_seed47_best/complete.json",
+          "sha256": "5743182ff65b3509d74235b24f65211027c84688bb6c3beff9937da8a2c82a54",
+          "bytes": 2959
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/25_FDCT_source_prediction_mean/complete.json",
+          "sha256": "d0ceca58c8e9b89e9f455f54464411748ffedcf60cedfd26ce2d8532c91509a9",
+          "bytes": 2819
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/26_FDCT_vfuse_seed29_best/complete.json",
+          "sha256": "7dd477bd0a61adb573abe1ed07f61cbc230ff05af423ba54d4cf6caa29035f84",
+          "bytes": 2959
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/27_FDCT_vfuse_seed11_best/complete.json",
+          "sha256": "2999e34c821f3f39ca106197a98b026e72499aa1bb3945ebb278603d1a540be3",
+          "bytes": 2958
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/28_D_vfuse_seed47_best/complete.json",
+          "sha256": "4dd0d903115ebc412c6e4b2b38c8f43ab512c087baa2ce130cbc1e195876dce2",
+          "bytes": 2955
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/29_D_source_prediction_mean/complete.json",
+          "sha256": "e53fc641ff1511dc50eea007e152ebd343c6fe9654f562d4029309197f372ecc",
+          "bytes": 2817
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/30_D_vfuse_seed29_best/complete.json",
+          "sha256": "a22cfff105ae2e0ea7d6c4f2d1bb05f9814b1c89ebc1055aa443834fdd83d896",
+          "bytes": 2955
+        },
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/blocks/31_D_vfuse_seed11_best/complete.json",
+          "sha256": "e5b11cffcc064dc881294a635482d883753a57387855207b988d9a374049e27d",
+          "bytes": 2956
+        }
+      ],
+      "treatment": "concatenated 32 saved JSON objects without changing their field values"
+    },
+    {
+      "path": "data/timing/resident/bootstrap_intervals.csv",
+      "bytes": 843,
+      "sha256": "0d907489cfaf9bf27c96fe9906eda6043fa6011b719639f7e793ea4ae5e626bd",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/analysis/bootstrap_intervals.csv",
+          "sha256": "0d907489cfaf9bf27c96fe9906eda6043fa6011b719639f7e793ea4ae5e626bd",
+          "bytes": 843
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/resident/cache_lifecycle_addendum.json",
+      "bytes": 3471,
+      "sha256": "c500f130739b6d0b9aac5039961e6a3f40ce9c87f341cfea8865c552ad1f5bf6",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/cache_lifecycle_addendum.json",
+          "sha256": "a12efb53f8c998ebab70e6b00cf2a6bca6714041d73543ff7f528b8c2ec9fcc5",
+          "bytes": 3843
+        }
+      ],
+      "treatment": "sanitized metadata copy",
+      "details": {
+        "removed_top_level_fields": [
+          "user_approved",
+          "user_confirmation",
+          "prior_output"
+        ],
+        "text_substitutions": "Local path prefixes replaced by LOCAL_PROJECT / LOCAL_HOME / LOCAL_BUILD; GPU UUID redacted. Numerical fields and scientific identities preserved."
+      }
+    },
+    {
+      "path": "data/timing/resident/execution_status.json",
+      "bytes": 638,
+      "sha256": "4e564988231db47298a88c3bb2f98c8f1aa45ca134dcff8323636c2cf68e784d",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/execution_status.json",
+          "sha256": "0afbd0e064f7248618461f6b0def0c6dc6c1ab5653da3fbf93adc805ba309654",
+          "bytes": 726
+        }
+      ],
+      "treatment": "sanitized metadata copy",
+      "details": {
+        "removed_top_level_fields": [
+          "user_confirmed",
+          "confirmation"
+        ],
+        "text_substitutions": "Local path prefixes replaced by LOCAL_PROJECT / LOCAL_HOME / LOCAL_BUILD; GPU UUID redacted. Numerical fields and scientific identities preserved."
+      }
+    },
+    {
+      "path": "data/timing/resident/new_vs_legacy.csv",
+      "bytes": 2985,
+      "sha256": "f53b3483508b95c161be4f110639434edbf59a15b407ce709f3ce832bc11ed7f",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/analysis/new_vs_legacy.csv",
+          "sha256": "f53b3483508b95c161be4f110639434edbf59a15b407ce709f3ce832bc11ed7f",
+          "bytes": 2985
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/resident/paired_calls.csv",
+      "bytes": 302293,
+      "sha256": "097990760b10d51ab6cf5b783bd38495a7479d4d782458b94f03a5d1da72a9c6",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/analysis/paired_calls.csv",
+          "sha256": "097990760b10d51ab6cf5b783bd38495a7479d4d782458b94f03a5d1da72a9c6",
+          "bytes": 302293
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/resident/paired_per_pair.csv",
+      "bytes": 20346,
+      "sha256": "43b567e60da55c1441dbe30835b30358984b6b038dc4f62748c1c9bd99cf0b39",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/analysis/paired_per_pair.csv",
+          "sha256": "43b567e60da55c1441dbe30835b30358984b6b038dc4f62748c1c9bd99cf0b39",
+          "bytes": 20346
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/resident/per_call.csv",
+      "bytes": 1467641,
+      "sha256": "b171feb44ab8a2abdb5d1a40ea53c691f3f6a79004178dc70fbcdb000719de4e",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/analysis/per_call.csv",
+          "sha256": "b171feb44ab8a2abdb5d1a40ea53c691f3f6a79004178dc70fbcdb000719de4e",
+          "bytes": 1467641
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/resident/per_round.csv",
+      "bytes": 3865,
+      "sha256": "fb4945e9a7543920ac7f013fb14087a1d1a3b7a9e5bca3db7cbccc396c242693",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/analysis/per_round.csv",
+          "sha256": "fb4945e9a7543920ac7f013fb14087a1d1a3b7a9e5bca3db7cbccc396c242693",
+          "bytes": 3865
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/resident/per_scene.csv",
+      "bytes": 10636,
+      "sha256": "236fde3c8a5f5a636216b9ba416fbee30eb2e85313da3d92a6949ba5a2753a3f",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/analysis/per_scene.csv",
+          "sha256": "236fde3c8a5f5a636216b9ba416fbee30eb2e85313da3d92a6949ba5a2753a3f",
+          "bytes": 10636
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/resident/protocol.json",
+      "bytes": 2773,
+      "sha256": "a155e482062576dfce398295cb49a16956ff2b66770933b8e7e9cb7942f3bed1",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/protocol.json",
+          "sha256": "27c5f68a679ea8f0df9ba1674cff49c033cb46105bbf05c35f6459db534f978e",
+          "bytes": 17969
+        }
+      ],
+      "treatment": "public path-independent runtime protocol subset",
+      "details": {
+        "excluded_fields": [
+          "calibration",
+          "checkpoints",
+          "final_root",
+          "formal_root",
+          "legacy_pair_manifest",
+          "project_root",
+          "require_user_idle_confirmation",
+          "sources",
+          "tdcnet_code",
+          "tdcnet_repo"
+        ],
+        "legacy_summary_pointer": "Replaced by package-relative path with unchanged source bytes and checksum."
+      }
+    },
+    {
+      "path": "data/timing/resident/schedule.json",
+      "bytes": 69496,
+      "sha256": "a9b8348ee66119a1509b3d473e82e96e39bee53d7960fab1c9fa7242bc7185df",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/schedule.json",
+          "sha256": "a9b8348ee66119a1509b3d473e82e96e39bee53d7960fab1c9fa7242bc7185df",
+          "bytes": 69496
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/resident/summary.csv",
+      "bytes": 1008,
+      "sha256": "8dd9df96d3b17bb2808ae0891ec4787ea60c190a836aa0fd8934dfef2f935a87",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/resident_timing/analysis/summary.csv",
+          "sha256": "8dd9df96d3b17bb2808ae0891ec4787ea60c190a836aa0fd8934dfef2f935a87",
+          "bytes": 1008
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "data/timing/timing_panel.json",
+      "bytes": 5212,
+      "sha256": "5dd7f2dcc5d225c944dfa094240549b484627538f1a4cc537b922a0381fa279e",
+      "source_files": [
+        {
+          "path_in_B0.9_bundle": "reproducibility/protocol/timing_panel.json",
+          "sha256": "5dd7f2dcc5d225c944dfa094240549b484627538f1a4cc537b922a0381fa279e",
+          "bytes": 5212
+        }
+      ],
+      "treatment": "byte-identical copy"
+    },
+    {
+      "path": "docs/DATA_DICTIONARY.md",
+      "bytes": 6158,
+      "sha256": "94ad290cb926f17861be883484c16bc82bbf13685366f8e9c71710af2c181081",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "docs/RECORD_INDEX.md",
+      "bytes": 4986,
+      "sha256": "acee11d2840fdb01d260f4890f4fb24518700d1248f5b971ed830ec54ca00144",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "docs/RELEASE_SCOPE.md",
+      "bytes": 3641,
+      "sha256": "59e839c85e36842c130e04777f7e4ef66a20ebb0e49604ff6913e76796be3210",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "docs/REPRODUCTION.md",
+      "bytes": 3546,
+      "sha256": "dee3d7b42fa4e86983427e47353ecc2248eede0e4afc02fda51124755f9f4b5d",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "docs/UPSTREAM_SOURCES.md",
+      "bytes": 2020,
+      "sha256": "53a6c004318be2ab34e4effcbc58437a12c44f3fff73ffb81d33a535aaf12cad",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "docs/timing_reader_changes.diff",
+      "bytes": 5007,
+      "sha256": "111f1763826e96c005383f560ab1a4f491f52fe61f2ce381cf49d6ebf91ed6d8",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 184,
+      "sha256": "e666f626b09d29e83ad186200ddf52a2c355dbad92a3316c65f08d4b47d76855",
+      "source_files": [],
+      "treatment": "new packaging/documentation file; not an original experiment record"
+    }
+  ]
+}

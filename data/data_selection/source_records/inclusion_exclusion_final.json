@@ -1,0 +1,78 @@
+{
+  "status": "DATA_READY_AWAITING_EVALUATION_AUTHORIZATION",
+  "central_counts": {
+    "all_view_directories": 2498,
+    "candidate_key_complete": 2193,
+    "excluded_missing_required_member": 305
+  },
+  "scene_summary": {
+    "11": {
+      "metadata_intersection_rows": 226,
+      "legal_pairs": 226,
+      "excluded": 0
+    },
+    "12": {
+      "metadata_intersection_rows": 141,
+      "legal_pairs": 141,
+      "excluded": 0
+    },
+    "13": {
+      "metadata_intersection_rows": 184,
+      "legal_pairs": 184,
+      "excluded": 0
+    },
+    "15": {
+      "metadata_intersection_rows": 238,
+      "legal_pairs": 238,
+      "excluded": 0
+    },
+    "16": {
+      "metadata_intersection_rows": 132,
+      "legal_pairs": 132,
+      "excluded": 0
+    },
+    "20": {
+      "metadata_intersection_rows": 185,
+      "legal_pairs": 185,
+      "excluded": 0
+    },
+    "21": {
+      "metadata_intersection_rows": 207,
+      "legal_pairs": 207,
+      "excluded": 0
+    },
+    "23": {
+      "metadata_intersection_rows": 240,
+      "legal_pairs": 240,
+      "excluded": 0
+    },
+    "24": {
+      "metadata_intersection_rows": 212,
+      "legal_pairs": 212,
+      "excluded": 0
+    },
+    "27": {
+      "metadata_intersection_rows": 218,
+      "legal_pairs": 218,
+      "excluded": 0
+    },
+    "29": {
+      "metadata_intersection_rows": 210,
+      "legal_pairs": 210,
+      "excluded": 0
+    }
+  },
+  "excluded_by_scene": {
+    "11": [],
+    "12": [],
+    "13": [],
+    "15": [],
+    "16": [],
+    "20": [],
+    "21": [],
+    "23": [],
+    "24": [],
+    "27": [],
+    "29": []
+  }
+}

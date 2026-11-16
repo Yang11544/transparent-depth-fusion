@@ -1,0 +1,44 @@
+{
+  "experiment_id": "final_evidence_20261022_171932",
+  "registered_beijing": "2026-10-22T17:19:32.810833+08:00",
+  "fdct_seed": 1,
+  "fdct_updates": 40000,
+  "fdct_bn": "author literal default; expected 10 eps=64 instances; use_DUC=True",
+  "vfuse_seeds": [
+    11,
+    29,
+    47
+  ],
+  "new_vfuse_runs": 5,
+  "new_vfuse_updates": 52800,
+  "total_successful_updates_cap": 92800,
+  "no_method_changes": true,
+  "all_fusion_locks_before_reserved_scoring": true,
+  "recovery_output_tolerance_mm": 0.001,
+  "recovery_relative_tolerance": 0,
+  "fdct_recipe": {
+    "optimizer": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "batch": 4,
+    "shape": [
+      240,
+      320
+    ],
+    "precision": "FP32 no AMP/TF32",
+    "loss": "existing masked L1+.1 normal",
+    "selection_updates": [
+      5000,
+      10000,
+      15000,
+      20000,
+      25000,
+      30000,
+      35000,
+      40000
+    ]
+  },
+  "plan_sha256": "7dd52507bb2c53f562c88132d3fb29f6f85bb27c31fe678c3ad4a84451f3d51d",
+  "scope_sha256": "eade49dd65a1b1852fb2af5d7ce3bde1d202772553b2204f1261d12d567e31ab",
+  "source_commit": "e68d2aaf727d271bf74d08e18d8224dc25d62bbd"
+}

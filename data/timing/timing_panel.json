@@ -1,0 +1,239 @@
+{
+  "status": "PROPOSED_METADATA_FIXED_NOT_EXECUTED",
+  "created_at": "2026-10-22T15:43:52.090178+08:00",
+  "rule": "each of fixed 11 scenes: first, floor((n-1)/2), last pair by numeric view; no image/error/speed read for selection",
+  "pairs": [
+    {
+      "pair_id": "scene11_view0",
+      "scene": 11,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 226
+    },
+    {
+      "pair_id": "scene11_view112",
+      "scene": 11,
+      "view": 112,
+      "within_scene_rank": 112,
+      "scene_pair_count": 226
+    },
+    {
+      "pair_id": "scene11_view239",
+      "scene": 11,
+      "view": 239,
+      "within_scene_rank": 225,
+      "scene_pair_count": 226
+    },
+    {
+      "pair_id": "scene12_view0",
+      "scene": 12,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 141
+    },
+    {
+      "pair_id": "scene12_view99",
+      "scene": 12,
+      "view": 99,
+      "within_scene_rank": 70,
+      "scene_pair_count": 141
+    },
+    {
+      "pair_id": "scene12_view239",
+      "scene": 12,
+      "view": 239,
+      "within_scene_rank": 140,
+      "scene_pair_count": 141
+    },
+    {
+      "pair_id": "scene13_view0",
+      "scene": 13,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 184
+    },
+    {
+      "pair_id": "scene13_view113",
+      "scene": 13,
+      "view": 113,
+      "within_scene_rank": 91,
+      "scene_pair_count": 184
+    },
+    {
+      "pair_id": "scene13_view239",
+      "scene": 13,
+      "view": 239,
+      "within_scene_rank": 183,
+      "scene_pair_count": 184
+    },
+    {
+      "pair_id": "scene15_view0",
+      "scene": 15,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 238
+    },
+    {
+      "pair_id": "scene15_view119",
+      "scene": 15,
+      "view": 119,
+      "within_scene_rank": 118,
+      "scene_pair_count": 238
+    },
+    {
+      "pair_id": "scene15_view239",
+      "scene": 15,
+      "view": 239,
+      "within_scene_rank": 237,
+      "scene_pair_count": 238
+    },
+    {
+      "pair_id": "scene16_view0",
+      "scene": 16,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 132
+    },
+    {
+      "pair_id": "scene16_view93",
+      "scene": 16,
+      "view": 93,
+      "within_scene_rank": 65,
+      "scene_pair_count": 132
+    },
+    {
+      "pair_id": "scene16_view234",
+      "scene": 16,
+      "view": 234,
+      "within_scene_rank": 131,
+      "scene_pair_count": 132
+    },
+    {
+      "pair_id": "scene20_view0",
+      "scene": 20,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 185
+    },
+    {
+      "pair_id": "scene20_view97",
+      "scene": 20,
+      "view": 97,
+      "within_scene_rank": 92,
+      "scene_pair_count": 185
+    },
+    {
+      "pair_id": "scene20_view234",
+      "scene": 20,
+      "view": 234,
+      "within_scene_rank": 184,
+      "scene_pair_count": 185
+    },
+    {
+      "pair_id": "scene21_view0",
+      "scene": 21,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 207
+    },
+    {
+      "pair_id": "scene21_view128",
+      "scene": 21,
+      "view": 128,
+      "within_scene_rank": 103,
+      "scene_pair_count": 207
+    },
+    {
+      "pair_id": "scene21_view239",
+      "scene": 21,
+      "view": 239,
+      "within_scene_rank": 206,
+      "scene_pair_count": 207
+    },
+    {
+      "pair_id": "scene23_view0",
+      "scene": 23,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 240
+    },
+    {
+      "pair_id": "scene23_view119",
+      "scene": 23,
+      "view": 119,
+      "within_scene_rank": 119,
+      "scene_pair_count": 240
+    },
+    {
+      "pair_id": "scene23_view239",
+      "scene": 23,
+      "view": 239,
+      "within_scene_rank": 239,
+      "scene_pair_count": 240
+    },
+    {
+      "pair_id": "scene24_view0",
+      "scene": 24,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 212
+    },
+    {
+      "pair_id": "scene24_view105",
+      "scene": 24,
+      "view": 105,
+      "within_scene_rank": 105,
+      "scene_pair_count": 212
+    },
+    {
+      "pair_id": "scene24_view239",
+      "scene": 24,
+      "view": 239,
+      "within_scene_rank": 211,
+      "scene_pair_count": 212
+    },
+    {
+      "pair_id": "scene27_view0",
+      "scene": 27,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 218
+    },
+    {
+      "pair_id": "scene27_view116",
+      "scene": 27,
+      "view": 116,
+      "within_scene_rank": 108,
+      "scene_pair_count": 218
+    },
+    {
+      "pair_id": "scene27_view239",
+      "scene": 27,
+      "view": 239,
+      "within_scene_rank": 217,
+      "scene_pair_count": 218
+    },
+    {
+      "pair_id": "scene29_view0",
+      "scene": 29,
+      "view": 0,
+      "within_scene_rank": 0,
+      "scene_pair_count": 210
+    },
+    {
+      "pair_id": "scene29_view104",
+      "scene": 29,
+      "view": 104,
+      "within_scene_rank": 104,
+      "scene_pair_count": 210
+    },
+    {
+      "pair_id": "scene29_view239",
+      "scene": 29,
+      "view": 239,
+      "within_scene_rank": 209,
+      "scene_pair_count": 210
+    }
+  ],
+  "note": "all 11 scenes already exposed; new panel complements original scene11 panel and never replaces original G5"
+}

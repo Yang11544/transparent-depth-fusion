@@ -1,0 +1,71 @@
+{
+  "name": "TDCNet-local; local public-config reconstruction, not full TransCG reproduction",
+  "seed": 1,
+  "initialization": "random; no checkpoint weights loaded",
+  "source_commit": "48458888a23fb395b232ed0969b50a49758e08d8",
+  "image_size_wh": [
+    320,
+    240
+  ],
+  "precision": "float32; AMP and TF32 disabled",
+  "train_scenes": [
+    1,
+    2,
+    3,
+    6,
+    9
+  ],
+  "development_scenes": [
+    4,
+    10
+  ],
+  "train_samples": 2024,
+  "development_samples": 761,
+  "train_batch": 4,
+  "eval_batch": 1,
+  "num_workers": 0,
+  "epochs": 120,
+  "updates_per_epoch": 506,
+  "total_updates": 60720,
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08
+  },
+  "scheduler": {
+    "type": "MultiStepLR",
+    "milestones": [
+      35,
+      65
+    ],
+    "gamma": 0.1,
+    "step": "once after training each completed epoch, before validation"
+  },
+  "loss": "TransCG fixed-public Criterion custom_masked_l1_loss + .1 cosine surface-normal; import redirected only",
+  "rgb_augmentation_probability": 0.8,
+  "rgb_augmentation": "fixed released chromatic_transform and add_noise function bodies; existing RGB/BGR conventions retained",
+  "flip": "independent vertical and horizontal p=.5; RGB/raw/depth/GT/mask aligned; mirrored principal point and signed focal length",
+  "depth_augmentation": false,
+  "valid_gt": "finite 0.01 <= GT <= 10 m",
+  "evaluation_mask": "object mask intersect valid GT",
+  "best_metric": "320x240 object MAE, equal image mean, metres; minimize",
+  "auxiliary_metrics": "pixel pooled MAE/RMSE/signed error, image macro, by camera/scene, missing/nonzero and mask-inner Euclidean edge <=3px/interior",
+  "evaluation_scope": "researcher-visible official-train scenes held out from this random-init optimization; not untouched test",
+  "simple_comparators": [
+    "raw",
+    "network",
+    "copy_nonzero: raw>0 ? raw : network; no GT in branch"
+  ],
+  "save_every_updates": 100,
+  "save": "atomic best/last, model/AdamW/scheduler/RNG/order/cursor/config",
+  "no_test_scenes": [
+    5,
+    7,
+    8
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE_FIXED_EVIDENCE",
+  "started_unix": 1792660592.8108244,
+  "finished_beijing": "2026-10-22T23:25:46.373239+08:00",
+  "package_elapsed_seconds": 22153.562398672104,
+  "max_seconds": 43200,
+  "new_artifact_bytes_before_review_archive": 10085109375,
+  "new_artifact_limit_bytes": 21474836480,
+  "frontend_successful_updates": 40000,
+  "new_fusion_successful_updates": 52800,
+  "total_successful_updates": 92800,
+  "failed_checker_extra_optimizer_updates": 0,
+  "data_or_weight_downloads": 0,
+  "reused_data_not_copied": true,
+  "all_previous_costs_preserved": true,
+  "reporting_finalized_beijing": "2026-10-22T23:28:00.886876+08:00",
+  "package_elapsed_seconds_including_final_audit": 22288.076064109802,
+  "cost_scope": "Whole package including F0 repair, continuous training, all scoring/timing, report and this no-inference audit; original 180s allowance included",
+  "new_artifact_bytes_before_final_archive_rebuild": 10109403210,
+  "final_seal_utc": "2026-10-22T15:29:14.513632+00:00",
+  "package_elapsed_seconds_at_final_seal": 22361.7028131485
+}

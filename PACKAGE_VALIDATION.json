@@ -1,0 +1,87 @@
+{
+  "package_revision": "public-records-v1",
+  "prepared_date": "2026-11-16",
+  "scientific_baseline": "B0.9",
+  "source_bundle_manifest_entries_verified": 510,
+  "source_copy_checks": {
+    "byte_identical_copies": 51,
+    "sanitized_or_reorganized": 14
+  },
+  "csv_non_path_cells_exactly_preserved": 1541649,
+  "timing_calculation_function_AST_unchanged": [
+    "group_summary",
+    "validate_rows",
+    "paired_comparisons",
+    "paired_bootstrap",
+    "build_outputs"
+  ],
+  "python_sources_parse": true,
+  "entry_and_synthetic_tests": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "analysis/analyze_best_last.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout": "usage: analyze_best_last.py [-h] --sources SOURCES --out OUT\n\nReaggregate existing per-image CSVs; no images, models, inference or training.\nPython >=3.10; standard library only. Computes original and postprocessed\nstages separately. G4's tail requirement is GLOBAL, not a new leave-one tail\ncriterion. Original-stage applications of G4 are explicitly diagnostic, not\nhistorical gates. Never selects a checkpoint using final evaluation results.\nRefuses output overwrite.\n\noptions:\n  -h, --help         show this help message and exit\n  --sources SOURCES\n  --out OUT\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "analysis/analyze_timing.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout": "usage: analyze_timing.py [-h] --run-dir RUN_DIR --out OUT\n\nOptional replay of existing timing records; no new measurement or inference.\n\noptions:\n  -h, --help         show this help message and exit\n  --run-dir RUN_DIR\n  --out OUT\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "analysis/verify_release.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout": "usage: verify_release.py [-h] [--root ROOT]\n\nRead-only package integrity and record-shape checks; no scientific reanalysis.\nNo images, model weights, training, inference, pixel scoring, or bootstrap are\nrun. Python >=3.10; standard library only.\n\noptions:\n  -h, --help   show this help message and exit\n  --root ROOT\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "analysis/test_sensitivity.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+    }
+  ],
+  "local_markdown_targets_checked": 47,
+  "broken_local_markdown_links": [],
+  "scoped_private_string_scan_findings": [],
+  "private_scan_scope": [
+    "private_user_path",
+    "local_sandbox_path",
+    "email_address",
+    "gpu_uuid",
+    "credential_like"
+  ],
+  "no_image_pixel_weight_font_manuscript_files": true,
+  "not_performed": [
+    "model training",
+    "model inference",
+    "new timing",
+    "pixel scoring",
+    "metric reaggregation of experiment records",
+    "bootstrap rerun",
+    "GitHub upload",
+    "remote repository validation",
+    "full historical data/weights authentication"
+  ],
+  "limitations": "This is a local package integrity and public-scope preparation check, not a new scientific experiment or universal privacy/licensing certificate."
+}

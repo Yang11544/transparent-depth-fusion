@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "state": "PREPARED_NOT_EXECUTED",
+  "scope": "resident full-path timing only; two front ends x (P,V11-best,V29-best,V47-best)",
+  "legacy_pair_manifest_sha256": "32f1d87bb030f2cd7aac027988954a53c76433bfe7eb83035bacd1c27674c2fa",
+  "frontends": [
+    "D",
+    "FDCT"
+  ],
+  "methods": [
+    "source_prediction_mean",
+    "vfuse_seed11_best",
+    "vfuse_seed29_best",
+    "vfuse_seed47_best"
+  ],
+  "panel_pairs": 33,
+  "scene_count": 11,
+  "rounds": 4,
+  "warmup_calls_per_block": 33,
+  "measured_passes_per_block": 3,
+  "method_order_indices": [
+    [
+      0,
+      1,
+      3,
+      2
+    ],
+    [
+      1,
+      2,
+      0,
+      3
+    ],
+    [
+      2,
+      3,
+      1,
+      0
+    ],
+    [
+      3,
+      0,
+      2,
+      1
+    ]
+  ],
+  "pair_order_seed": 20261029,
+  "bootstrap_seed": 20261029,
+  "bootstrap_replicates": 2000,
+  "shape": [
+    240,
+    320
+  ],
+  "precision": "FP32",
+  "batch_size": 1,
+  "depth_planes": 8,
+  "fusion_range_mm": [
+    200,
+    850
+  ],
+  "torch_version": "2.10.0+cu128",
+  "cuda_version": "12.8",
+  "required_gpu_name_contains": "5060 Ti",
+  "torch_threads": 4,
+  "opencv_threads": 1,
+  "TF32": false,
+  "AMP": false,
+  "compile": false,
+  "cudnn_benchmark": false,
+  "budget_seconds": 7200,
+  "closing_reserve_seconds": 600,
+  "block_timeout_seconds": 600,
+  "total_output_limit_bytes": 536870912,
+  "required_free_gpu_bytes_before_block": 4294967296,
+  "required_free_gpu_bytes_during_block": 2147483648,
+  "process_reserved_gpu_limit_bytes": 8589934592,
+  "temperature_stop_c": 85,
+  "require_no_other_reported_compute_apps": true,
+  "GT_or_mask_reads": false,
+  "accuracy_scoring": false,
+  "new_training": false,
+  "new_methods": false,
+  "new_samples": false,
+  "write_only_new_directory": true,
+  "repeat_failed_block_automatically": false,
+  "measured_calls_total": 3168,
+  "warmup_calls_total": 1056,
+  "all_calls_total": 4224,
+  "front_end_forwards_total": 8448,
+  "fusion_forwards_total": 3168,
+  "synchronization": "historical A.timer: torch.cuda.synchronize then time.perf_counter at t0..t6; stage boundaries unchanged",
+  "measured_scope": "live PNG reading, preprocessing, H2D/front-end/D2H, geometry, fusion, upper projection; no load/warmup/GT/metrics/logging",
+  "cache_policy": "fresh worker per block; model objects and allocator retained through 33 warmup +99 measured calls; no explicit empty_cache",
+  "old_new_causal_limit": "historical and new runs differ in residency, warmup, blocked order, repetitions and date; not an isolated cache-clearing causal experiment",
+  "sources": {
+    "legacy_summary.csv": {
+      "snapshot": "data/timing/original/summary.csv",
+      "sha256": "7015fc8785a4bd262ba7ee5ec33779da19e785819d06c1b3fd348690e7a8126d",
+      "bytes": 1860
+    }
+  }
+}

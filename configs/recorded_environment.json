@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-10-22T10:10:34.625883+00:00",
+  "recorded_during_training": true,
+  "python_executable": "LOCAL_PROJECT/.venv/bin/python",
+  "python": "3.10.21 (main, Aug 27 2026, 14:42:07) [GCC 14.3.0]",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "torch": "2.10.0+cu128",
+  "torch_compiled_cuda": "12.8",
+  "cudnn": 91002,
+  "gpu_readonly_query": "NVIDIA GeForce RTX 5060 Ti, REDACTED_GPU_UUID, 617.42, 16311 MiB",
+  "registered_execution_precision": "FP32; AMP=False, TF32=False; configured by unchanged setup_device",
+  "training_process_restarted": false,
+  "other_model_forward_calls_for_this_record": 0
+}

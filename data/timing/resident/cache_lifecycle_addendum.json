@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "approved_at_utc": "2026-10-29T14:36:46.243082+00:00",
+  "base_protocol_sha256": "27c5f68a679ea8f0df9ba1674cff49c033cb46105bbf05c35f6459db534f978e",
+  "supersedes_only": "Known nine internal cache-release attempts are counted no-ops; every other cache call still raises. Original base protocol remains unchanged.",
+  "approved_sites": [
+    {
+      "file": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/adapted/src/models/fusion.py",
+      "line": 106,
+      "function": "build_cost_volume",
+      "key": "vfuse/adapted/src/models/fusion.py:106"
+    },
+    {
+      "file": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/adapted/src/models/fusion.py",
+      "line": 122,
+      "function": "build_cost_volume",
+      "key": "vfuse/adapted/src/models/fusion.py:122"
+    },
+    {
+      "file": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/adapted/src/models/fusion.py",
+      "line": 150,
+      "function": "build_cost_volume",
+      "key": "vfuse/adapted/src/models/fusion.py:150"
+    },
+    {
+      "file": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/adapted/src/models/fusion.py",
+      "line": 167,
+      "function": "build_cost_volume",
+      "key": "vfuse/adapted/src/models/fusion.py:167"
+    },
+    {
+      "file": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/adapted/src/models/fusion.py",
+      "line": 202,
+      "function": "forward",
+      "key": "vfuse/adapted/src/models/fusion.py:202"
+    },
+    {
+      "file": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/adapted/src/models/fusion.py",
+      "line": 224,
+      "function": "forward",
+      "key": "vfuse/adapted/src/models/fusion.py:224"
+    },
+    {
+      "file": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/adapted/src/models/fusion.py",
+      "line": 95,
+      "function": "build_cost_volume",
+      "key": "vfuse/adapted/src/models/fusion.py:95"
+    },
+    {
+      "file": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/adapted/src/models/swenet.py",
+      "line": 114,
+      "function": "forward",
+      "key": "vfuse/adapted/src/models/swenet.py:114"
+    },
+    {
+      "file": "LOCAL_PROJECT/outputs/vfuse_formal_20261020_185416/adapted/src/models/swenet.py",
+      "line": 150,
+      "function": "forward",
+      "key": "vfuse/adapted/src/models/swenet.py:150"
+    }
+  ],
+  "source_evidence": [
+    {
+      "source_key": "vfuse/adapted/src/models/fusion.py",
+      "source_sha256": "7d4010d74069614ba4da687374a901399f482771dfdb3ba6d864631223bfbd1e",
+      "source_bytes": 10562,
+      "original_model_source_modified": false
+    },
+    {
+      "source_key": "vfuse/adapted/src/models/swenet.py",
+      "source_sha256": "fd11b54369dc37868f8a385ca5242a67f24883a88ef84c62ea2792a5d4883c00",
+      "source_bytes": 7102,
+      "original_model_source_modified": false
+    }
+  ],
+  "expected_internal_noops_per_V_call": 9,
+  "expected_internal_noops_per_P_call": 0,
+  "model_tensor_ops_and_deletions_unchanged": true,
+  "no_explicit_cache_release_executed": true,
+  "per_site_guard_overhead": "Caller check and count are inside the timed forward path and included in recorded V latency.",
+  "old_protocol_contrast": "Historical runs also executed these internal cache-release calls; the new protocol disables them in addition to residency, outer cache clearing, warmup, order and repetitions.",
+  "carried_active_seconds": 698.5217430591583,
+  "total_active_seconds_limit": 7200,
+  "cumulative_output_bytes_limit": 536870912
+}

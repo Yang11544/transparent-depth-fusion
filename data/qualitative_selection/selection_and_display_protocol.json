@@ -1,0 +1,94 @@
+{
+  "status": "POSTHOC_SELECTION_LOCKED_BEFORE_IMAGE_INSPECTION_PIXELS_NOT_AVAILABLE_HERE",
+  "selection_basis": "Saved image-averaged MAE in the pre-existing 33-pair metadata panel",
+  "stage": "target_raw_upper_projection",
+  "frontends": [
+    "D",
+    "FDCT"
+  ],
+  "V_seed": 11,
+  "V_checkpoint": "internally_selected_best",
+  "same_pairs_for_both_frontends": true,
+  "selection_count": 3,
+  "selection_character": "Outcome-informed, post-hoc illustrative examples; not random, representative or new independent validation",
+  "rules": [
+    {
+      "category": "A_both_frontends_improve_over_single",
+      "sort_metric": "mean_relative_PS_change",
+      "rank": "floor((n-1)/2)",
+      "ties": "numeric scene then view",
+      "exclude_previously_selected_pairs": true
+    },
+    {
+      "category": "B_at_least_one_frontend_degrades_vs_single",
+      "sort_metric": "worst_relative_PS_change",
+      "rank": "floor((n-1)/2)",
+      "ties": "numeric scene then view",
+      "exclude_previously_selected_pairs": true
+    },
+    {
+      "category": "C_P_V_ordering_differs_by_frontend",
+      "sort_metric": "PV_frontend_disagreement",
+      "rank": "floor((n-1)/2)",
+      "ties": "numeric scene then view",
+      "exclude_previously_selected_pairs": true
+    }
+  ],
+  "alternatives": "No visual re-selection; a missing asset blocks the selected example, not permission to choose a more favorable example",
+  "input_channels": [
+    "target RGB",
+    "target raw depth",
+    "released target GT"
+  ],
+  "error_methods": [
+    "single",
+    "source_raw_mean",
+    "source_prediction_mean",
+    "source_prediction_replace",
+    "vfuse_seed11_best"
+  ],
+  "depth_display_range_m": [
+    0,
+    1.5
+  ],
+  "error_display_range_mm": [
+    0,
+    100
+  ],
+  "display_notes": [
+    "same limits for all examples/frontends/methods",
+    "mark values above display range as saturated; no numerical clipping of saved scores",
+    "raw missing/invalid positions and outside-evaluation-mask pixels are distinct from zero error",
+    "full target image, no manually selected crop",
+    "no source-coverage overlays unless a matching saved mask is verified",
+    "use absolute-error arrays only as error maps, never reconstruct predictions as GT +/- error"
+  ],
+  "fallback_inference_authorized": false,
+  "resident_timing_authorized": false,
+  "samples": [
+    {
+      "category": "A_both_frontends_improve_over_single",
+      "pair_id": "scene13_view239",
+      "scene": 13,
+      "view": 239,
+      "candidate_count_after_exclusion": 30,
+      "rank_zero_based": 14
+    },
+    {
+      "category": "B_at_least_one_frontend_degrades_vs_single",
+      "pair_id": "scene12_view0",
+      "scene": 12,
+      "view": 0,
+      "candidate_count_after_exclusion": 3,
+      "rank_zero_based": 1
+    },
+    {
+      "category": "C_P_V_ordering_differs_by_frontend",
+      "pair_id": "scene11_view0",
+      "scene": 11,
+      "view": 0,
+      "candidate_count_after_exclusion": 11,
+      "rank_zero_based": 5
+    }
+  ]
+}
